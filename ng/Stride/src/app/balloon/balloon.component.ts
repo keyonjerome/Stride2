@@ -18,10 +18,10 @@ export class BalloonComponent implements OnInit {
   }
 
   fixLinks() {
-      for (var i = 0; i < this.myBooks.length; i++) {
-    this.myBooks[i]['url'] = this.myBooks[i]['url'].replace(/\/localhost\/space\/uploads\/CAM2-HOR\//gi, " http://ec2-54-214-171-12.us-west-2.compute.amazonaws.com/uploads/CAM2-HOR/");
-    this.myBooks[i]['url'] = this.myBooks[i]['url'].slice(7);
-    console.log(this.myBooks[i]['url']);
+    for (var i = 0; i < this.myBooks.length; i++) {
+      this.myBooks[i]['url'] = this.myBooks[i]['url'].replace(/\/localhost\/space\/uploads\/CAM2-HOR\//gi, " http://ec2-54-214-171-12.us-west-2.compute.amazonaws.com/uploads/CAM2-HOR/");
+      this.myBooks[i]['url'] = this.myBooks[i]['url'].slice(7);
+      console.log(this.myBooks[i]['url']);
     };
 
     console.log(this.myBooks);

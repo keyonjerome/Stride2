@@ -1,27 +1,28 @@
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!-- <link rel="stylesheet" type="text/css" href="styles.css"> -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- <link rel="stylesheet" type="text/css" href="styles.css"> -->
 
 </head>
 
 <div class="balloon-comp" id='b-comp'>
-<nav class="navbar navbar-dark navbar-expand-lg" style="background: #000000;">
-        <a class="navbar-brand" href="#">STRIDE</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Choose A Balloon</a>
-            </li>
-            <!-- <li class="nav-item dropdown">
+  <nav class="navbar navbar-dark navbar-expand-lg" style="background: #000000;">
+    <a class="navbar-brand" href="#">STRIDE</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Choose A Balloon</a>
+        </li>
+        <!-- <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Dropdown
               </a>
@@ -32,81 +33,112 @@
                 <a class="dropdown-item" href="#">Something else here</a>
               </div> 
             </li> -->
-            <!-- <li class="nav-item">
+        <!-- <li class="nav-item">
               <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
             </li> -->
-          </ul>
-          <!-- <form class="form-inline my-2 my-lg-0">
+      </ul>
+      <!-- <form class="form-inline my-2 my-lg-0">
             <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
           </form> -->
-        </div>
-      </nav>
-      <div class="container-fluid " style="min-height:95vh !important;background: #061F4A !important;
+    </div>
+  </nav>
+  <div class="container-fluid " style="min-height:95vh !important;background: #061F4A !important;
       opacity: 1;">
 
-            <div class="row pt-3 pb-3" style="background:darkslategray; opacity:1.0;">
-                <div class="col-3 mx-auto text-center text-white">
-                    <h2>Timmins 2018 Data</h2>
-                  </div>
-                <div class="offset-7 col-2">
-                  <div class="ml-auto my-auto">
-                          <mat-button-toggle-group name="fontStyle" aria-label="Font Style">
-                              <mat-button-toggle >1</mat-button-toggle>
-                              <mat-button-toggle >2</mat-button-toggle>
-                              <mat-button-toggle >3</mat-button-toggle>
-                              <mat-button-toggle >4</mat-button-toggle>
-                              <mat-button-toggle >5</mat-button-toggle>
-                            </mat-button-toggle-group>
+    <div class="row pt-3 pb-3" style="background:darkslategray; opacity:1.0;">
+      <div class="col-3 mx-auto text-center text-white">
+        <h2>Timmins 2018 Data</h2>
+      </div>
+      <div class="offset-7 col-2">
+        <div class="ml-auto my-auto">
+          <mat-button-toggle-group name="fontStyle" aria-label="Font Style">
+            <mat-button-toggle>1</mat-button-toggle>
+            <mat-button-toggle>2</mat-button-toggle>
+            <mat-button-toggle>3</mat-button-toggle>
+            <mat-button-toggle>4</mat-button-toggle>
+            <mat-button-toggle>5</mat-button-toggle>
+          </mat-button-toggle-group>
 
-                          </div>
-                    </div>
-            </div>
-            <particles  [width]="90" [height]="80" >
-     
-              </particles>
-            <div class="row no-gutters mt-3">
-                    <div class="offset-1 col-5">
-                      <h2 class="text-white text-uppercase display-5 text-center text-bold">HORIZONTAL IMAGERY</h2>
-                        <img class="img-fluid" [src]="myBooks[currentValue]['url']">
-                      </div>
-                    <div class="col-5">
-                        <h2 class="text-white text-uppercase display-5 text-center text-bold">VERTICAL IMAGERY</h2>
-                        <img class="img-fluid"  [src]="myBooks[currentValue]['url']">
-                    </div>
-                    <div class="col-1">
+        </div>
+      </div>
+    </div>
+    <particles [width]="90" [height]="80">
 
-                    </div>
-                </div>
-              <div class="row mt-auto end-row">
-                <div class="col-12 ">
-                <mat-slider class="my-auto align-bottom" id="progress-slider" min="1" max="{{myBooks.length}}" step="1" value="3"  (valueChange)="updateSettings($event)" ></mat-slider>
-                </div></div>
-              </div>
-            </div> 
+    </particles>
+    <div class="row no-gutters mt-3">
+      <div class="offset-1 col-5 text-center ">
+        <h2 class="text-white text-uppercase display-5 text-center text-bold">HORIZONTAL IMAGERY</h2>
+        <img class=" w-75 img-thumbnail" [src]="myBooks[currentValue]['url']">
+      </div>
+      <div class="col-5 text-center">
+        <h2 class="text-white text-uppercase display-5 text-center text-bold">VERTICAL IMAGERY</h2>
+        <img class=" w-75 img-thumbnail text-center" [src]="myBooks[currentValue]['url']">
+      </div>
+      <div class="col-1">
+
+      </div>
+    </div>
+    <div class="row no-gutters mt-3">
+        <div class="offset-1 col-5 text-center ">
+          <h2 class="text-white text-uppercase display-5 text-center text-bold">Temperature</h2>
 
 
-   <style>
-      #progress-slider {
-        width:100% !important;
+          <p></p>
+          <!-- <img class=" w-75 img-thumbnail" [src]="myBooks[currentValue]['url']"> -->
+        </div>
+        <div class="col-5 text-center">
+          <h2 class="text-white text-uppercase display-5 text-center text-bold">VERTICAL IMAGERY</h2>
+          <!-- <img class=" w-75 img-thumbnail text-center" [src]="myBooks[currentValue]['url']"> -->
+        </div>
+        <div class="col-1">
+  
+        </div>
+      </div>
+    <div class="row mt-auto end-row">
+      <div class="col-12 ">
+        <mat-slider class="my-auto align-bottom" id="progress-slider" min="1" max="{{myBooks.length}}" step="1"
+          value="3" (valueChange)="updateSettings($event)"></mat-slider>
+      </div>
+    </div>
+  </div>
+</div>
 
-      }
-      .end-row {
-        width:100vw;
-        position:absolute !important;
-bottom:0 !important;
-      }
-      particles, canvas {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        z-index: 0;
-    }
-    particles,canvas {
-      height:100vh !important;
-      overflow: hidden;
-    }
-    #b-comp {
-      overflow-y:hidden !important;
-    }
-    </style>
+
+<style>
+  #progress-slider {
+    width: 100% !important;
+
+  }
+
+  .end-row {
+    width: 100vw;
+    position: absolute !important;
+    bottom: 0 !important;
+  }
+
+  particles,
+  canvas {
+    position: absolute;
+    width: 100vw;
+    height: 70vh;
+    z-index: 0;
+    overflow:hidden !important;
+  }
+  div.container-fluid {
+    max-height:100vh !important;
+    overflow:hidden;
+
+  }
+
+  #b-comp {
+    height:100vh;
+    width:100vw;
+    overflow: hidden !important;
+  }
+
+  html {
+    height:100vh !important;
+    width:100vw !important;
+  }
+</style>
