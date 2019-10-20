@@ -81,9 +81,10 @@
     </div>
     <div class="row no-gutters mt-3">
         <div class="offset-1 col-5 text-center ">
-          <h2 class="text-white text-uppercase display-5 text-center text-bold">Temperature</h2>
-
-
+            <h2 class="text-white text-uppercase display-5 text-center text-bold">Temperature</h2>
+            <div class="card w-50 mx-auto text-center card-small"  tabindex="0">
+                <p><b>Temperature: </b></p>
+              </div>
           <p></p>
           <!-- <img class=" w-75 img-thumbnail" [src]="myBooks[currentValue]['url']"> -->
         </div>
@@ -95,10 +96,13 @@
   
         </div>
       </div>
+      
+
     <div class="row mt-auto end-row">
       <div class="col-12 ">
         <mat-slider class="my-auto align-bottom" id="progress-slider" min="1" max="{{myBooks.length}}" step="1"
           value="3" (valueChange)="updateSettings($event)"></mat-slider>
+          <h3 class=" pb-3 text-white text-center ">Time: {{myBooks[currentValue]['mission_time'] | date:'medium' }}</h3>
       </div>
     </div>
   </div>
