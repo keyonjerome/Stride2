@@ -11,6 +11,7 @@ import { BalloonComponent } from './balloon/balloon.component';
 import { ParticlesModule } from 'angular-particle';
 import {MatButtonModule, MatButtonToggleModule} from '@angular/material';
 import {MatSliderModule} from '@angular/material/slider';
+import { BalloonInfoComponent } from './balloon-info/balloon-info.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import {MatSliderModule} from '@angular/material/slider';
     AppComponent,
     HomeComponent,
     ChooseABalloonComponent,
-    BalloonComponent
+    BalloonComponent,
+    BalloonInfoComponent
   ],
   imports: [
     BrowserModule,
