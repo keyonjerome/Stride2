@@ -9,6 +9,7 @@ import { HomeComponent } from './home/home.component';
 import { ChooseABalloonComponent } from './choose-aballoon/choose-aballoon.component';
 import { BalloonComponent } from './balloon/balloon.component';
 import { ParticlesModule } from 'angular-particle';
+import {MatButtonModule, MatButtonToggleModule} from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,9 @@ import { ParticlesModule } from 'angular-particle';
     BsDropdownModule,
     TooltipModule,
     ModalModule,
-    ParticlesModule
+    ParticlesModule,
+    MatButtonModule,
+    MatButtonToggleModule
   ],
   providers: [],
   bootstrap: [AppComponent]
