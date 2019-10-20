@@ -3,8 +3,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- <link rel="stylesheet" type="text/css" href="styles.css"> -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.css">
-    <!-- <title>Glider.js Test</title> -->
+
 </head>
 
 <div class="balloon-comp" id='b-comp'>
@@ -69,17 +68,11 @@
             <div class="row no-gutters mt-3">
                     <div class="offset-1 col-5">
                       <h2 class="text-white text-uppercase display-5 text-center text-bold">HORIZONTAL IMAGERY</h2>
-
-                      <div id="glider_container">
-                          <div class="glider">
-                            <div class="glider__slide"><img src="../../assets/image2.png"></div>
-                            <div class="glider__slide"><img src="../../assets/image2.png"></div>
-                            </div>
-                            </div>
-                       <!-- <img class="img-fluid" src="../assets/image2.png"> -->
+                        <img class="img-fluid" [src]="myBooks[currentValue]['url']">
                       </div>
                     <div class="col-5">
                         <h2 class="text-white text-uppercase display-5 text-center text-bold">VERTICAL IMAGERY</h2>
+                        <img class="img-fluid"  [src]="myBooks[currentValue]['url']">
                     </div>
                     <div class="col-1">
 
@@ -87,76 +80,12 @@
                 </div>
               <div class="row mt-auto end-row">
                 <div class="col-12 ">
-                <!-- <mat-slider class="my-auto align-bottom" id="progress-slider" min="1" max="300" step="1" value="3"></mat-slider> -->
+                <mat-slider class="my-auto align-bottom" id="progress-slider" min="1" max="{{myBooks.length}}" step="1" value="3"  (valueChange)="updateSettings($event)" ></mat-slider>
                 </div></div>
               </div>
             </div> 
 
 
-
-            <script src="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.js"></script>
-            <script>
-              window.onload() = function() {
-                setTimeout(function(){
-                new Glider(angular.element.querySelector('.glider'), {
-                  
-                // `auto` allows automatic responsive
-                // width calculations
-                
-                slidesToShow: 1,
-                slidesToScroll: 'auto',
-                // should have been named `itemMinWidth`
-                // slides grow to fit the container viewport
-                // ignored unless `slidesToShow` is set to `auto`
-                itemWidth: undefined,
-                // if true, slides wont be resized to fit viewport
-                // requires `itemWidth` to be set
-                // * this may cause fractional slides
-                exactWidth: false,
-                // speed aggravator - higher is slower
-                duration: .5,
-                // dot container element or selector
-                dots: 'CSS Selector',
-                // allow mouse dragging
-                draggable: true,
-                // how much to scroll with each mouse delta
-                dragVelocity: 10,
-                // use any custom easing function
-                // compatible with most easing plugins
-                easing: function (x, t, b, c, d) {
-                  return c*(t/=d)*t + b;
-                },
-                // event control
-                scrollPropagate: false,
-                eventPropagate: true,
-                // Force centering slide after scroll event
-                scrollLock: false,
-                // how long to wait after scroll event before locking
-                // if too low, it might interrupt normal scrolling
-                scrollLockDelay: 150,
-                // Force centering slide after resize event
-                resizeLock: true,
-                // Glider.js breakpoints are mobile-first
-                responsive: [
-                  {
-                    breakpoint: 900,
-                    settings: {
-                      slidesToShow: 2,
-                      slidesToScroll: 2
-                    }
-                  },
-                  {
-                    breakpoint: 575,
-                    settings: {
-                      slidesToShow: 3,
-                      slidesToScroll: 3
-                    }
-                  }
-                ]
-                });
-            }, 3000);
-          }
-            </script>
    <style>
       #progress-slider {
         width:100% !important;
