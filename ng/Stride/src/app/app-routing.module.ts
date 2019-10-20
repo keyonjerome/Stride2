@@ -17,6 +17,10 @@ const routes: Routes = [
     path:'balloon/:id',
     component:BalloonComponent
   },
+  {
+    path:'balloon',
+    component:BalloonComponent
+  },
   { path: '**', component: HomeComponent }
 ];
 @NgModule({
